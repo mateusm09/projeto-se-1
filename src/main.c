@@ -44,10 +44,10 @@ void main(void){
    // if(GPIOPinRead(GPIO_PORTJ_BASE, GPIO_PIN_0) == GPIO_PIN_0) // Testa estado do push-button SW1
       //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_4, 0); // Apaga LED D3
 
-    for(count = 0; count < 1250000; count++){}
+    for(count = 0; count < 12500000; count++){}
     
       //PIOPinWrite(GPIO_PORTK_BASE, GPIO_PIN_1, 0);
-      GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_0, toggle);
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_0, toggle);
     toggle = toggle ? 0:1;
       
   } // while

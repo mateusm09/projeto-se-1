@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Users\Daeln\Desktop\EK-TM4C1294_IAR8\Projects\project-se-1\settings\project-se-1.Debug.general.xcl" --backend -f "C:\Users\Daeln\Desktop\EK-TM4C1294_IAR8\Projects\project-se-1\settings\project-se-1.Debug.driver.xcl" 
+& "D:\\common\bin\cspybat" -f "D:\embarcados\EK-TM4C1294_IAR8-master\Projects\projeto-se-1\settings\project-se-1.Debug.general.xcl" --backend -f "D:\embarcados\EK-TM4C1294_IAR8-master\Projects\projeto-se-1\settings\project-se-1.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Users\Daeln\Desktop\EK-TM4C1294_IAR8\Projects\project-se-1\settings\project-se-1.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\Daeln\Desktop\EK-TM4C1294_IAR8\Projects\project-se-1\settings\project-se-1.Debug.driver.xcl" 
+& "D:\\common\bin\cspybat" -f "D:\embarcados\EK-TM4C1294_IAR8-master\Projects\projeto-se-1\settings\project-se-1.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\embarcados\EK-TM4C1294_IAR8-master\Projects\projeto-se-1\settings\project-se-1.Debug.driver.xcl" 
 }
