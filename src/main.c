@@ -27,7 +27,11 @@ void main(void)
 
     while (1)
     {
-        SysCtlDelay(8000000); // executa 3 instruções assembly
+        for (count = 0; count < 1200000; count++)
+            ;
+
+        // SysCtlDelay(8000000); // executa 3 instruções assembly
+
         // 24Mhz:
         // 1/24MHz = 41,67nS -> 41,67*3instr = 125,01 nS/exec
         // 125,01 nS * 8M = 1 s
@@ -38,5 +42,13 @@ void main(void)
 
         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_0, toggle);
         toggle = toggle ? 0 : 1;
+
+        // Ao utilizar a função SysCtlDelay não houveram mudanças
+        // ao mudar o nível de otimização,
+        // Ela executa 3 instruções assembly em um laço de repetição.
+        // Como a função está direto em assembly, não há o que o compilador otimizar
+
+        // Já no caso da utilização do for, ao otimizar em nível máximo, priorizando velocidade
+        // o LED fica aceso sempre, evidenciando a otimização do código
     }
 }
